@@ -134,8 +134,8 @@ initial Q = 0;
 initial Qbar = 1;
 always @(posedge clk)
 begin
-Q = (((~K)&Q)|(J&(~Q)));
-Qbar = ((~J)&Qbar)|((~K)&(~Qbar)); 
+Q = (J&(~Q))|((~K)&Q);
+Qbar = ((~J)&(Qbar))|K&(~Qbar); 
 end
 endmodule
 
